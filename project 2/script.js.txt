@@ -1,0 +1,29 @@
+function displayProfile() {
+
+    let name = document.getElementById("name").value;
+    let roll = document.getElementById("roll").value;
+    let marks = parseInt(document.getElementById("marks").value);
+
+    let ave = marks;
+    let grade;
+
+    if (ave >= 80) {
+        grade = "A";
+    } 
+    else if (ave >= 70) {
+        grade = "B";
+    } 
+    else if (ave >= 60) {
+        grade = "C";
+    } 
+    else {
+        grade = "F";
+    }
+
+    document.getElementById("sname").innerHTML = name;
+    document.getElementById("sroll").innerHTML = roll;
+    document.getElementById("smarks").innerHTML = marks;
+    document.getElementById("sgrade").innerHTML = grade;
+
+    document.getElementById("profileCard").style.display = "block";
+}

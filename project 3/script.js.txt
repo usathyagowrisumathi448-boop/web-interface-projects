@@ -1,0 +1,47 @@
+```javascript
+const interestList = [
+  {
+    title: "Music 🎧",
+    pic: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    title: "Movies 🍿",
+    pic: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    title: "Cricket 🏏",
+    pic: "https://images.unsplash.com/photo-1562077772-3bd90403f7f0?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    title: "Gaming 🕹️",
+    pic: "https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    title: "Programming 👨‍💻",
+    pic: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=600&q=80"
+  }
+];
+
+const gallery = document.getElementById("gallery");
+
+interestList.forEach(function(item) {
+
+  const article = document.createElement("article");
+  article.className = "box";
+
+  const image = document.createElement("img");
+  image.src = item.pic;
+  image.alt = item.title;
+  image.className = "photo";
+
+  const caption = document.createElement("div");
+  caption.className = "caption";
+  caption.textContent = item.title;
+
+  article.appendChild(image);
+  article.appendChild(caption);
+
+  gallery.appendChild(article);
+
+});
+```

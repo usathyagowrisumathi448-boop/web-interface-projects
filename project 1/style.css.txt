@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    font-family: Arial;
+    margin-top: 100px;
+}
+
+.box {
+    border: 2px solid black;
+    width: 250px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: black;
+}
+
+#count {
+    font-size: 40px;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 18px;
+}

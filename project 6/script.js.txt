@@ -1,0 +1,63 @@
+let display = "0";
+let num1 = "";
+let num2 = "";
+let operator = "";
+
+function updateDisplay() {
+    document.getElementById("display").textContent = display;
+}
+
+function number(value) {
+
+    if (operator === "") {
+        num1 = num1 + value;
+        display = num1;
+    } 
+    else {
+        num2 = num2 + value;
+        display = num2;
+    }
+
+    updateDisplay();
+}
+
+function selectOperator(value) {
+    operator = value;
+}
+
+function calculate() {
+
+    const a = Number(num1);
+    const b = Number(num2);
+
+    if (operator === "+") {
+        display = a + b;
+    } 
+    else if (operator === "-") {
+        display = a - b;
+    } 
+    else if (operator === "×") {
+        display = a * b;
+    } 
+    else if (operator === "÷") {
+
+        if (b === 0) {
+            display = "Error";
+        } 
+        else {
+            display = a / b;
+        }
+    }
+
+    updateDisplay();
+}
+
+function clearCalculator() {
+
+    display = "0";
+    num1 = "";
+    num2 = "";
+    operator = "";
+
+    updateDisplay();
+}

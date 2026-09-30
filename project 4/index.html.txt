@@ -1,0 +1,143 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <h2>🎓 EduPanel</h2>
+
+      <div class="menu">
+        <div class="active">🏠 Home</div>
+        <div>👤 Profile</div>
+        <div>📖 Courses</div>
+        <div>📋 Assignments</div>
+        <div>📈 Results</div>
+        <div>🗓 Attendance</div>
+        <div>⚙️ Settings</div>
+      </div>
+
+    </aside>
+
+
+    <!-- Main Section -->
+    <main class="main">
+
+      <!-- Top Header -->
+      <div class="top">
+
+        <div>
+          <h1>Student Dashboard</h1>
+          <p>Good morning! Here's your academic overview.</p>
+        </div>
+
+        <div class="avatar">
+          S
+        </div>
+
+      </div>
+
+
+      <!-- Statistics -->
+      <div class="stats">
+
+        <div class="statCard">
+          <span class="icon">👨‍🎓</span>
+          <div>
+            <p>Total Students</p>
+            <h2 id="totalStudents">0</h2>
+          </div>
+        </div>
+
+        <div class="statCard">
+          <span class="icon">📅</span>
+          <div>
+            <p>Attendance</p>
+            <h2 id="attendance">0%</h2>
+          </div>
+        </div>
+
+        <div class="statCard">
+          <span class="icon">🏆</span>
+          <div>
+            <p>Average Marks</p>
+            <h2 id="averageMarks">0%</h2>
+          </div>
+        </div>
+
+        <div class="statCard">
+          <span class="icon">📚</span>
+          <div>
+            <p>Courses</p>
+            <h2>6</h2>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Student Information -->
+      <section class="section">
+
+        <div class="sectionTitle">
+          <h2>Student Information</h2>
+
+          <button class="viewButton">
+            View All
+          </button>
+        </div>
+
+        <div class="tableContainer">
+
+          <table class="table">
+
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Course</th>
+                <th>Year</th>
+                <th>Attendance</th>
+                <th>Marks</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody id="studentTable">
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+
+      <!-- Bottom Cards -->
+      <div class="bottom">
+
+        <div class="notice">
+          <h3>📢 Notice</h3>
+
+          <p>
+            Assignment submission deadline is this Friday.
+          </p>
+        </div>
+
+        <div class="notice">
+          <h3>📌 Upcoming</h3>
+
+          <p>
+            Internal examination s
+```

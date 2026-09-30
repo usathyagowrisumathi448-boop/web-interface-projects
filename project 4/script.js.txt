@@ -1,0 +1,108 @@
+```javascript
+const studentData = [
+  {
+    name: "S. Magesh",
+    course: "CSE",
+    year: "3",
+    attendance: 92,
+    marks: 85
+  },
+  {
+    name: "Arun Kumar",
+    course: "CSE",
+    year: "3",
+    attendance: 88,
+    marks: 78
+  },
+  {
+    name: "Priya",
+    course: "CSE",
+    year: "3",
+    attendance: 95,
+    marks: 91
+  }
+];
+
+
+// Total Students
+
+const totalStudents = studentData.length;
+
+document.getElementById("totalStudents").textContent =
+  totalStudents;
+
+
+// Average Attendance
+
+let totalAttendance = 0;
+
+studentData.forEach(function(student) {
+  totalAttendance += student.attendance;
+});
+
+const averageAttendance =
+  totalAttendance / studentData.length;
+
+document.getElementById("attendance").textContent =
+  Math.round(averageAttendance) + "%";
+
+
+// Average Marks
+
+let totalMarks = 0;
+
+studentData.forEach(function(student) {
+  totalMarks += student.marks;
+});
+
+const averageMarks =
+  totalMarks / studentData.length;
+
+document.getElementById("averageMarks").textContent =
+  Math.round(averageMarks) + "%";
+
+
+// Student Table
+
+const studentTable =
+  document.getElementById("studentTable");
+
+studentData.forEach(function(student) {
+
+  const row = document.createElement("tr");
+
+  const status =
+    student.attendance >= 90
+      ? "Good"
+      : "Average";
+
+  const statusClass =
+    student.attendance >= 90
+      ? "good"
+      : "average";
+
+
+  row.innerHTML = `
+    <td>
+      <strong>${student.name}</strong>
+    </td>
+
+    <td>${student.course}</td>
+
+    <td>${student.year}rd Year</td>
+
+    <td>${student.attendance}%</td>
+
+    <td>${student.marks}%</td>
+
+    <td>
+      <span class="${statusClass}">
+        ${status}
+      </span>
+    </td>
+  `;
+
+  studentTable.appendChild(row);
+
+});
+```

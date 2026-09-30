@@ -1,0 +1,154 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page">
+    <div class="formcontainer">
+
+        <h1>Student Registration Form</h1>
+        <p class="subtitle">Please fill in all the details correctly</p>
+
+        <div id="successMessage" class="successmessage">
+            ✓ Registration successful!
+        </div>
+
+        <form id="registrationForm">
+
+            <div class="formgroup">
+                <label>1. First Name</label>
+                <input type="text" id="firstName" placeholder="Enter your first name">
+                <span id="firstNameError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>2. Last Name</label>
+                <input type="text" id="lastName" placeholder="Enter your last name">
+                <span id="lastNameError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>3. Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+                <span id="usernameError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>4. Email</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
+                <span id="emailError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>5. Mobile Number</label>
+                <input type="text" id="mobile" placeholder="Enter 10 digit mobile number">
+                <span id="mobileError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>6. Date of Birth</label>
+                <input type="date" id="dob">
+                <span id="dobError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>7. Gender</label>
+
+                <div class="radiogroup">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+
+                <span id="genderError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>8. Address</label>
+                <textarea id="address" placeholder="Enter your complete address"></textarea>
+                <span id="addressError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>9. City</label>
+                <input type="text" id="city" placeholder="Enter your city">
+                <span id="cityError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>10. State</label>
+
+                <select id="state">
+                    <option value="">-- Select State --</option>
+                    <option>Tamil Nadu</option>
+                    <option>Kerala</option>
+                    <option>Karnataka</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Telangana</option>
+                    <option>Maharashtra</option>
+                    <option>Other</option>
+                </select>
+
+                <span id="stateError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>11. Pincode</label>
+                <input type="text" id="pincode" placeholder="Enter 6 digit pincode">
+                <span id="pincodeError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>12. Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <span id="passwordError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>13. Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm password">
+                <span id="confirmPasswordError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>14. College Name</label>
+                <input type="text" id="college" placeholder="Enter your college name">
+                <span id="collegeError" class="error"></span>
+            </div>
+
+            <div class="formgroup">
+                <label>15. Department</label>
+
+                <select id="department">
+                    <option value="">-- Select Department --</option>
+                    <option>CSE</option>
+                    <option>ECE</option>
+                    <option>EEE</option>
+                    <option>MECH</option>
+                    <option>CIVIL</option>
+                    <option>IT</option>
+                </select>
+
+                <span id="departmentError" class="error"></span>
+            </div>
+
+            <div class="buttongroup">
+                <button type="submit" class="submitbtn">Register</button>
+                <button type="button" class="reset-btn" id="resetBtn">Reset</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```

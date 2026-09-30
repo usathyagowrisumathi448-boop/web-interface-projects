@@ -1,0 +1,71 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Attendance Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="container">
+
+      <h2>Student Attendance Tracker</h2>
+
+      <p class="subtitle">
+        Manage student attendance easily
+      </p>
+
+
+      <!-- Attendance Summary -->
+
+      <div class="summary">
+
+        <div class="card presentCard">
+          <h3>Present</h3>
+          <p id="totalPresent">0</p>
+        </div>
+
+        <div class="card absentCard">
+          <h3>Absent</h3>
+          <p id="totalAbsent">0</p>
+        </div>
+
+        <div class="card totalCard">
+          <h3>Total</h3>
+          <p id="totalStudents">0</p>
+        </div>
+
+      </div>
+
+
+      <!-- Student List -->
+
+      <div class="listBox">
+
+        <h3 class="listTitle">
+          Student List
+        </h3>
+
+        <div id="studentList"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+```

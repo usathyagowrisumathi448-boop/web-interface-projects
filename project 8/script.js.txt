@@ -1,0 +1,170 @@
+```javascript
+const form = document.getElementById("registrationForm");
+const resetBtn = document.getElementById("resetBtn");
+const successMessage = document.getElementById("successMessage");
+
+function error(id, message) {
+    document.getElementById(id + "Error").textContent = message;
+}
+
+function clearErrors() {
+    document.querySelectorAll(".error").forEach(function(item) {
+        item.textContent = "";
+    });
+}
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    clearErrors();
+
+    let valid = true;
+
+    let firstName = document.getElementById("firstName").value.trim();
+    let lastName = document.getElementById("lastName").value.trim();
+    let username = document.getElementById("username").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let dob = document.getElementById("dob").value;
+    let address = document.getElementById("address").value.trim();
+    let city = document.getElementById("city").value.trim();
+    let state = document.getElementById("state").value;
+    let pincode = document.getElementById("pincode").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let college = document.getElementById("college").value.trim();
+    let department = document.getElementById("department").value;
+
+    let gender = document.querySelector(
+        'input[name="gender"]:checked'
+    );
+
+    if (firstName === "") {
+        error("firstName", "First name is required");
+        valid = false;
+    } else if (!/^[A-Za-z]+$/.test(firstName)) {
+        error("firstName", "Only letters are allowed");
+        valid = false;
+    }
+
+    if (lastName === "") {
+        error("lastName", "Last name is required");
+        valid = false;
+    } else if (!/^[A-Za-z]+$/.test(lastName)) {
+        error("lastName", "Only letters are allowed");
+        valid = false;
+    }
+
+    if (username === "") {
+        error("username", "Username is required");
+        valid = false;
+    } else if (username.length < 4) {
+        error("username", "Minimum 4 characters required");
+        valid = false;
+    }
+
+    if (email === "") {
+        error("email", "Email is required");
+        valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        error("email", "Enter valid email");
+        valid = false;
+    }
+
+    if (mobile === "") {
+        error("mobile", "Mobile number is required");
+        valid = false;
+    } else if (!/^[0-9]{10}$/.test(mobile)) {
+        error("mobile", "Enter exactly 10 digits");
+        valid = false;
+    }
+
+    if (dob === "") {
+        error("dob", "Date of birth is required");
+        valid = false;
+    }
+
+    if (!gender) {
+        error("gender", "Select your gender");
+        valid = false;
+    }
+
+    if (address === "") {
+        error("address", "Address is required");
+        valid = false;
+    } else if (address.length < 10) {
+        error("address", "Minimum 10 characters required");
+        valid = false;
+    }
+
+    if (city === "") {
+        error("city", "City is required");
+        valid = false;
+    }
+
+    if (state === "") {
+        error("state", "Select a state");
+        valid = false;
+    }
+
+    if (pincode === "") {
+        error("pincode", "Pincode is required");
+        valid = false;
+    } else if (!/^[0-9]{6}$/.test(pincode)) {
+        error("pincode", "Enter exactly 6 digits");
+        valid = false;
+    }
+
+    if (password === "") {
+        error("password", "Password is required");
+        valid = false;
+    } else if (password.length < 8) {
+        error("password", "Minimum 8 characters required");
+        valid = false;
+    } else if (
+        !/[A-Z]/.test(password) ||
+        !/[a-z]/.test(password) ||
+        !/[0-9]/.test(password)
+    ) {
+        error(
+            "password",
+            "Use uppercase, lowercase and number"
+        );
+        valid = false;
+    }
+
+    if (confirmPassword === "") {
+        error("confirmPassword", "Confirm your password");
+        valid = false;
+    } else if (password !== confirmPassword) {
+        error("confirmPassword", "Passwords do not match");
+        valid = false;
+    }
+
+    if (college === "") {
+        error("college", "College name is required");
+        valid = false;
+    }
+
+    if (department === "") {
+        error("department", "Select department");
+        valid = false;
+    }
+
+    if (valid) {
+        successMessage.style.display = "block";
+    } else {
+        successMessage.style.display = "none";
+    }
+});
+
+resetBtn.addEventListener("click", function() {
+
+    form.reset();
+
+    clearErrors();
+
+    successMessage.style.display = "none";
+});
+```

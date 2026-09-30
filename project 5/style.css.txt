@@ -1,0 +1,281 @@
+```css
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Page */
+
+.page {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dbeafe,
+      #f3e8ff,
+      #dcfce7
+    );
+
+  padding: 20px 10px;
+}
+
+
+/* Container */
+
+.container {
+  width: 340px;
+  max-width: 92%;
+
+  margin: 0 auto;
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background-color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Heading */
+
+.container h2 {
+  color: black;
+  text-align: center;
+
+  margin: 0 0 5px;
+
+  font-size: 21px;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+  text-align: center;
+
+  color: #555;
+
+  margin-bottom: 18px;
+
+  font-size: 12px;
+}
+
+
+/* Summary */
+
+.summary {
+  display: flex;
+
+  gap: 8px;
+
+  margin: 15px 0 20px;
+}
+
+
+/* Cards */
+
+.card {
+  flex: 1;
+
+  padding: 12px 6px;
+
+  text-align: center;
+
+  border: 1px solid #ddd;
+
+  border-radius: 9px;
+
+  background-color: #f8fafc;
+
+  box-shadow:
+    0 3px 7px rgba(0, 0, 0, 0.07);
+}
+
+.card h3 {
+  color: black;
+
+  margin: 0 0 5px;
+
+  font-size: 14px;
+}
+
+.card p {
+  color: black;
+
+  font-size: 22px;
+
+  font-weight: bold;
+
+  margin: 0;
+}
+
+
+/* Top Borders */
+
+.presentCard {
+  border-top: 4px solid #4caf50;
+}
+
+.absentCard {
+  border-top: 4px solid #f44336;
+}
+
+.totalCard {
+  border-top: 4px solid #0288d1;
+}
+
+
+/* Student List */
+
+.listBox {
+  background-color: #f8fafc;
+
+  padding: 14px;
+
+  border-radius: 11px;
+
+  border: 1px solid #e2e8f0;
+}
+
+.listTitle {
+  color: black;
+
+  margin-top: 0;
+  margin-bottom: 11px;
+
+  font-size: 16px;
+}
+
+
+/* Student */
+
+.student {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 10px 8px;
+
+  margin-bottom: 8px;
+
+  background-color: #ffffff;
+
+  border-radius: 8px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Student Info */
+
+.studentInfo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* Avatar */
+
+.avatar {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background-color: #2f2f2f;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+
+  font-size: 15px;
+}
+
+
+/* Student Name */
+
+.name {
+  color: black;
+
+  font-weight: bold;
+
+  font-size: 13px;
+}
+
+
+/* Student ID */
+
+.statusText {
+  margin: 3px 0 0;
+
+  color: #777;
+
+  font-size: 10px;
+}
+
+
+/* Button */
+
+.attendanceButton {
+  color: white;
+
+  border: none;
+
+  padding: 7px 10px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  min-width: 75px;
+
+  font-size: 11px;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Present Button */
+
+.presentButton {
+  background-color: #4caf50;
+}
+
+
+/* Absent Button */
+
+.absentButton {
+  background-color: #f44336;
+}
+
+
+/* Button Hover */
+
+.attendanceButton:hover {
+  opacity: 0.85;
+}
+```

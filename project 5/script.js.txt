@@ -1,0 +1,198 @@
+```javascript
+const initialStudents = [
+  {
+    id: 1,
+    name: "Alex Johnson",
+    present: true
+  },
+  {
+    id: 2,
+    name: "Maria Garcia",
+    present: true
+  },
+  {
+    id: 3,
+    name: "James Smith",
+    present: false
+  },
+  {
+    id: 4,
+    name: "Emily Chen",
+    present: true
+  },
+  {
+    id: 5,
+    name: "Liam Brown",
+    present: false
+  }
+];
+
+
+let students = initialStudents;
+
+
+// Update Attendance
+
+function updateAttendance() {
+
+  const totalPresent =
+    students.filter(function(student) {
+      return student.present;
+    }).length;
+
+
+  const totalAbsent =
+    students.length - totalPresent;
+
+
+  document.getElementById("totalPresent").textContent =
+    totalPresent;
+
+  document.getElementById("totalAbsent").textContent =
+    totalAbsent;
+
+  document.getElementById("totalStudents").textContent =
+    students.length;
+}
+
+
+// Display Students
+
+function displayStudents() {
+
+  const studentList =
+    document.getElementById("studentList");
+
+  studentList.innerHTML = "";
+
+
+  students.forEach(function(student) {
+
+    const studentDiv =
+      document.createElement("div");
+
+    studentDiv.className = "student";
+
+
+    const studentInfo =
+      document.createElement("div");
+
+    studentInfo.className = "studentInfo";
+
+
+    const avatar =
+      document.createElement("div");
+
+    avatar.className = "avatar";
+
+    avatar.textContent =
+      student.name.charAt(0);
+
+
+    const info =
+      document.createElement("div");
+
+
+    const name =
+      document.createElement("span");
+
+    name.className = "name";
+
+    name.textContent =
+      student.name;
+
+
+    const statusText =
+      document.createElement("p");
+
+    statusText.className = "statusText";
+
+    statusText.textContent =
+      "Student ID: " + student.id;
+
+
+    info.appendChild(name);
+
+    info.appendChild(statusText);
+
+
+    studentInfo.appendChild(avatar);
+
+    studentInfo.appendChild(info);
+
+
+    // Attendance Button
+
+    const button =
+      document.createElement("button");
+
+    button.className = "attendanceButton";
+
+
+    if (student.present) {
+
+      button.classList.add("presentButton");
+
+      button.textContent = "Present";
+
+    } else {
+
+      button.classList.add("absentButton");
+
+      button.textContent = "Absent";
+
+    }
+
+
+    button.addEventListener(
+      "click",
+      function() {
+
+        toggleAttendance(student.id);
+
+      }
+    );
+
+
+    studentDiv.appendChild(studentInfo);
+
+    studentDiv.appendChild(button);
+
+    studentList.appendChild(studentDiv);
+
+  });
+}
+
+
+// Toggle Attendance
+
+function toggleAttendance(id) {
+
+  students = students.map(function(student) {
+
+    if (student.id === id) {
+
+      return {
+        ...student,
+        present: !student.present
+      };
+
+    }
+
+    return student;
+
+  });
+
+
+  updateAttendance();
+
+  displayStudents();
+}
+
+
+// Initial Display
+
+updateAttendance();
+
+displayStudents();
+```
